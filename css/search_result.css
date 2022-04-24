@@ -1,0 +1,30 @@
+#main-block{
+    padding: 20px;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#main-block>div{
+    height: 200px;
+    width: 60%;
+    display: flex;
+    margin-bottom: 15px;
+}
+#main-block>div:hover{
+    cursor: pointer;
+    color: rgb(71, 70, 70);
+}
+#main-block>div>div{
+    margin-right: 20px;
+}
+#main-block>div>:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#main-block>div>div>p{
+    font-size: 20px;
+}
+#main-block>div>div>img{
+    height: 100%;
+}

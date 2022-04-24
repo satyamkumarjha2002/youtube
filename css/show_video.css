@@ -1,0 +1,61 @@
+*{
+    overflow: hidden;
+}
+#play-content{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#play-video{
+    width: 70%;
+}
+#video{
+    width: 98%;
+    height: 80%;
+}
+#recom{
+    width: 28%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+#recom>div{
+    display: flex;
+    justify-content: space-between;
+}
+#recom>div:hover{
+    cursor: pointer;
+}
+#recom>div>div{
+    width: 49%;
+    height: 150px;
+    margin-bottom: 10px;
+}
+#recom>div>:nth-child(2){
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
+#like_btn{
+    width: 98%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+}
+i:hover{
+    cursor: pointer;
+    color: blue;
+}
+#like{
+    width: 20%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+#download{
+    width:50%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}

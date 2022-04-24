@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube</title>
+    <link rel="stylesheet" href="css\show_video.css">;
+    <link rel="stylesheet" href="css\index.css">
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="navbar">
+            <div id="logo">
+                <i onclick="display_menu()" class="fa-solid fa-bars" id="menu"></i>
+                <img onclick="home_page()" src="images\download__1_-removebg-preview.png" alt="">
+            </div>
+            <div id="search">
+                <div id="input_btn">
+                    <input oninput="debaunce(main,500)" type="text" name="" id="query" placeholder="search">
+                    <button onclick="data()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div id="search_res">
+
+                </div>
+            </div>
+            <div id="some_btn">
+                <i class="fa-solid fa-video"></i>
+                <i class="fa-solid fa-braille"></i>
+                <i class="fa-solid fa-bell"></i>
+                <i class="fa-solid fa-user"></i>
+            </div>
+        </div>
+        <div id="main">
+            <div id="controls-icons">
+                <i class="fa-solid fa-house"></i>
+                <i class="fa-brands fa-wpexplorer"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-solid fa-house"></i>
+                <i class="fa-brands fa-wpexplorer"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div id="controls-details">
+                <div>
+                    <div>
+                        <i class="fa-solid fa-house"></i>
+                        <h2>Home</h2>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-wpexplorer"></i>
+                        <h2>Explore</h2>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-youtube"></i>
+                        <h2>Shorts</h2>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-house"></i>
+                        <h2>Subscription</h2>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <i class="fa-brands fa-youtube"></i>
+                        <h2>Library</h2>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <h2>History</h2>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-clock"></i>
+                        <h2>watch Later</h2>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <h2>Liked Videos</h2>
+                    </div>
+                </div>
+                <div>
+                    <h3>More From Youtube</h3>
+                    <div>
+                        <i class="fa-brands fa-youtube"></i>
+                        <h2>Premium</h2>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-film"></i>
+                        <h2>Films</h2>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-headset"></i>
+                        <h2>Gaming</h2>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-headset"></i>
+                        <h2>Live</h2>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-shirt"></i>
+                        <h2>Fashion</h2>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-book"></i>
+                        <h2>learning</h2>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-trophy"></i>
+                        <h2>Sports</h2>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <i class="fa-solid fa-gear"></i>
+                        <h2>Settings</h2>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-flag"></i>
+                        <h2>Reports</h2>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-circle-question"></i>
+                        <h2>Help</h2>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-message"></i>
+                        <h2>Feedback</h2>
+                    </div>
+                </div>
+                <div id="last">
+                    <div id="tandc">
+                        <p>AboutPressCopyrightContact usCreatorAdvertiseDevelopers</p>
+                        <p>TermsPrivacyPolicy & SafetyHow YouTube worksTest new features</p>
+                    </div>
+                    <div id="lin">
+                        <p>© 2022 Google LLC</p>
+                    </div>
+                </div>
+            </div>
+            <div id="play-content">
+                <div id="play-video">
+                    <div id="video">
+
+                    </div>
+                    <div id="like_btn">
+                          <div id="like">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            <i class="fa-solid fa-thumbs-down"></i>
+                          </div>
+                          <div id="download">
+                            <i class="fa-solid fa-share"></i>
+                            <i class="fa-solid fa-arrow-down"></i>
+                            <i class="fa-solid fa-list"></i>
+                            <i class="fa-solid fa-heart"></i>
+                          </div>
+                    </div>
+                    <div id="comment">
+
+                    </div>
+                </div>
+                <div id="recom">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    let i = 0;
+    /*navbar function start*/
+    function display_menu() {
+
+        if (i % 2 == 0) {
+            let menu_details = document.querySelector("#controls-details");
+            let menu_icons = document.querySelector("#controls-icons");
+            menu_icons.style.display = "none"
+            menu_details.style.display = "block"
+            document.querySelector("#play-content").style.width = "85%"
+        } else {
+            let menu_details = document.querySelector("#controls-details");
+            let menu_icons = document.querySelector("#controls-icons");
+            menu_icons.style.display = "block"
+            menu_details.style.display = "none"
+            document.querySelector("#play-content").style.width = "95%"
+        }
+        ++i;
+    }
+    //navbar function end
+    function home_page() {
+        window.location.href = "index.html"
+    }
+    let recom_data = JSON.parse(localStorage.getItem("play_data"));
+
+    function recom_dis(data) {
+        let main = document.querySelector("#recom");
+        recom_data.map(function (ele, index) {
+            let snp = ele.snippet;
+            let thub = snp.thumbnails;
+            let div = document.createElement("div");
+            div.addEventListener("click", function () {
+                set_index(index)
+            })
+            let div1 = document.createElement("div");
+            let image = document.createElement("img");
+            image.src = thub.high.url;
+            let div2 = document.createElement("div");
+            let title = document.createElement("p");
+            title.innerText = snp.title;
+            let chanel = document.createElement("h4");
+            chanel.innerText = snp.channelTitle;
+            div2.append(title, chanel);
+            div1.append(image);
+            div.append(div1, div2);
+            main.append(div);
+        })
+    }
+
+    function set_index(index) {
+        localStorage.setItem("index", JSON.stringify(index));
+        window.location.href = "show_video.html";
+    }
+
+    function show_video() {
+        let video_div = document.querySelector("#video");
+        let div = document.createElement("div");
+        let index = JSON.parse(localStorage.getItem("index"));
+        let data = JSON.parse(localStorage.getItem("play_data"));
+        let final_data = data[index];
+        let iframe = document.createElement("iframe");
+        let video_id = final_data.id.videoId;
+        iframe.src = `https://www.youtube.com/embed/${video_id}`;
+        iframe.width = "100%";
+        iframe.height = "100%";
+        iframe.allow = "fullscreen";
+        video_div.append(iframe);
+        console.log(final_data)
+        console.log(video_id)
+    }
+    show_video()
+    recom_dis(recom_data)
+</script>
+<script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
