@@ -1,5 +1,4 @@
 let i = 0;
-
 function display_menu() {
     if (i % 2 == 0) {
         let menu_details = document.querySelector("#controls-details");

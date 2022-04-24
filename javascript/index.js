@@ -1,6 +1,6 @@
 
 function fetch_data() {
-    fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=100&q=coding+comedy+game&key=AIzaSyCXFk0Vqc56TlbVEdYqE7P7kSleurLkiAU`)
+    fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=100&q=coding+comedy+game&key=AIzaSyCM18uwX5ZEMQPAGpiq5dtr-HERhgVgkyA`)
         .then(function (res) {
             return res.json();
         }).then(function (res) {
@@ -12,7 +12,7 @@ function fetch_data() {
 let main_data=0;
 function fetch_search_data() {
     let query = document.querySelector("#query").value;
-    fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${query}&key=AIzaSyCXFk0Vqc56TlbVEdYqE7P7kSleurLkiAU`)
+    fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${query}&key=AIzaSyCM18uwX5ZEMQPAGpiq5dtr-HERhgVgkyA`)
         .then(function (res) {
             return res.json();
         }).then(function (res) {
